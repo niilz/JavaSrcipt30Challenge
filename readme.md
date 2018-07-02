@@ -1,1 +1,1 @@
-This is just a repo for myself to keep track of my progress.
+This is just a repo for myself to keep track of my progress in Wes Bos' JS30 Course.
