@@ -1,1 +1,0 @@
-This is just a repo for myself to keep track of my progress.
