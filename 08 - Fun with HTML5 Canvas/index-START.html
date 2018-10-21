@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+<script>
+
+  const cx = document.querySelector("canvas").getContext("2d");
+
+  addEventListener("mousedown", draw);
+  addEventListener("mouseup", () => removeEventListener("mousemove", draw))
+
+  function draw(event) {
+    let time = (new Date).getSeconds();
+    let radius = 10;
+    if (time > 10 && time < 30) radius = time;
+    let color = time * 10;
+    console.log("radius", radius);
+    console.log("color", color);
+    if (color == 360) color = 0;
+    console.log(time);
+    addEventListener("mousemove", draw);
+      cx.beginPath();
+      cx.fillStyle = `hsl(${color}, 100%, 50%)`;
+      cx.arc(event.clientX, event.clientY, radius, 0, 7);
+      cx.fill();
+  }
+</script>
+
+<style>
+  html, body {
+    margin:0;
+  }
+</style>
+
+</body>
+</html>
