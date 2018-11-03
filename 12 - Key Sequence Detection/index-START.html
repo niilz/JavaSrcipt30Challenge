@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Key Detection</title>
+  <link rel="stylesheet" href="main.css">
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
 <script>
   window.addEventListener("keydown", niilz);
-  const codeList = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+  const codeList = ["ArrowDown", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowLeft", "ArrowLeft", "ArrowRight", "ArrowRight"];
   let tempCodeList = codeList.slice();
   function niilz(e) {
     if (tempCodeList.pop() != e.key) {
@@ -16,7 +17,7 @@
     }
     if (tempCodeList.length == 0) {
       let p = document.createElement("p");
-      p.textContent = "NIILz";
+      p.textContent = "I ❤️ UnicornJS";
       document.body.appendChild(p);
       tempCodeList = codeList.slice();
     }
